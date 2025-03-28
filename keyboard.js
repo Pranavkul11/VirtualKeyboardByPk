@@ -9,6 +9,12 @@ const rows = [
 
 const keyboard = document.getElementById("keyboard");
 const textInput = document.getElementById("textInput");
+const removeAll=document.createElement("button");
+removeAll.textContent="clear";
+removeAll.onclick=()=>{
+    textInput.value="";
+}
+keyboard.appendChild(removeAll);
 
 rows.forEach(row => {
     let rowDiv = document.createElement("div");
